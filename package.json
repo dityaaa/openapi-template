@@ -1,0 +1,22 @@
+{
+  "name": "openapi-boilerplate",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run bundle:watch\" \"vite\"",
+    "build": "npm run bundle && vite build",
+    "lint": "spectral lint src/openapi.yaml",
+    "bundle": "swagger-cli bundle src/openapi.yaml --outfile docs/specs.json --format=-1",
+    "bundle:watch": "nodemon --watch src --ext json,yaml,yml --exec \"npm run bundle\""
+  },
+  "dependencies": {
+    "@apidevtools/swagger-cli": "^4.0.4",
+    "rapidoc": "^9.3.3",
+    "vite": "^3.2.3"
+  },
+  "devDependencies": {
+    "@stoplight/spectral-cli": "^6.6.0",
+    "concurrently": "^7.5.0",
+    "nodemon": "^2.0.20"
+  }
+}
