@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@apidevtools/swagger-cli": "^4.0.4",
-    "rapidoc": "^9.3.3",
+    "rapidoc": "^9.3.4",
     "vite": "^3.2.3"
   },
   "devDependencies": {
